@@ -79,17 +79,3 @@ Los detalles de función y alcance de cada archivo están también en el README 
 | Orden causal | Ejemplos con reloj lógico y ordenamiento de eventos por `(marca, nodo)`. | Es una demostración basada en un búfer local; no es una implementación distribuida completa de orden causal. |
 | Patrón Saga | Orquestador, comandos y consumidor demostrativos con acción compensatoria. | El fallo se fuerza en el ejemplo; no hay persistencia transaccional ni almacenamiento de estado. |
 
-## Pendientes de integración y validación
-
-1. Añadir instrucciones y configuración reproducible para instalar dependencias y ejecutar cada proceso.
-2. Unificar la configuración de direcciones del broker/coordinador y evitar valores de entorno incrustados en el código; usar variables de entorno o configuración local excluida del repositorio.
-3. Revisar la consistencia de las rutas de importación de los módulos gRPC generados y definir desde qué directorio se ejecuta cada módulo.
-4. Añadir pruebas automatizadas para el contrato gRPC, publicación/consumo, deduplicación, ordenamiento y compensación Saga.
-5. Incorporar evidencias de ejecución y, si el alcance lo exige, persistencia real para deduplicación y estado de Saga.
-6. Definir el despliegue de infraestructura. En el inventario actual no se encontraron archivos Docker Compose, manifiestos de servicios ni configuración de base de datos.
-
-Las carpetas [pruebas/](./pruebas/README.md), [evidencias/](./evidencias/README.md), [logs/](./logs/README.md) y [scripts/](./scripts/README.md) contienen por ahora su documentación, no implementaciones adicionales. Para el análisis ampliado y sus observaciones, consulta el [informe detallado](./informe/INFORME_PROYECTO.md).
-
-## Alcance de esta documentación
-
-La descripción se basa en los archivos presentes en el repositorio. La existencia de un ejemplo no implica que haya sido ejecutado ni validado en una red distribuida. Las direcciones y opciones de conexión deben revisarse antes de ejecutar el código en otro entorno.
