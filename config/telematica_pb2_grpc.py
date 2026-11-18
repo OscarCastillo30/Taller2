@@ -3,7 +3,7 @@
 import grpc
 import warnings
 
-import telematica_pb2 as telematica__pb2
+import config.telematica_pb2 as telematica__pb2
 
 GRPC_GENERATED_VERSION = '1.85.1'
 GRPC_VERSION = grpc.__version__

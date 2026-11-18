@@ -1,7 +1,7 @@
 import time
 import grpc
-import telematica_pb2
-import telematica_pb2_grpc
+import config.telematica_pb2 as telematica_pb2
+import config.telematica_pb2_grpc as telematica_pb2_grpc
 
 def report_metrics_with_retry(coordinator_ip, node_id):
     target = f"{coordinator_ip}:50051"
